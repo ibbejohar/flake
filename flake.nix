@@ -9,11 +9,16 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, ... }:
+  let
+    username = "fool";
+  in 
+  {
     nixosConfigurations = { 
       # Hostname
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit username; };
         modules = [
           ./system/configuration.nix
             home-manager.nixosModules.home-manager
