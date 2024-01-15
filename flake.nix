@@ -17,7 +17,7 @@
   {
     nixosConfigurations = { 
       # Hostname
-      Selfirah = nixpkgs.lib.nixosSystem {
+      ${hostname} = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit username; inherit hostname; };
         modules = [
