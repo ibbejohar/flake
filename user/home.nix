@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 
 {
 
@@ -28,8 +28,8 @@ home = {
 	stateVersion = "23.11";
 
   # USER
-	username = "fool";
-	homeDirectory = "/home/fool";
+	username = "${username}";
+	homeDirectory = "/home/${username}";
  
   };
 
