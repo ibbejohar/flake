@@ -1,0 +1,62 @@
+{ pkgs, config, ... }:
+
+{
+  home = {
+    packages = with pkgs; [
+      angband
+      anki
+      bitwarden
+      bk
+      cargo
+      cinnamon.nemo
+      cryptsetup
+      discord
+      dunst
+      eza
+      feh
+      ffmpeg-full
+      file
+      fzf
+      gcc
+      go
+      htop
+      imagemagick
+      luajit
+      luajitPackages.magick
+      luarocks
+      lutris
+      lxappearance
+      maim
+      mpc-cli
+      mpd
+      mpv
+      newsboat
+      nodePackages_latest.bash-language-server
+      nodePackages_latest.pyright
+      nodePackages_latest.readability-cli
+      nodejs
+      openssl
+      pkg-config
+      porsmo
+      prismlauncher
+      qalculate-gtk
+      qbittorrent
+      rust-analyzer
+      rustc
+      sc-im
+      sxiv
+      texlive.combined.scheme-full
+      tuir
+      ueberzugpp
+      unrar-wrapper
+      unzip
+      wiki-tui
+      wineWowPackages.staging
+      xclip
+      youtube-tui
+      yt-dlp
+      zip
+      ];
+  };
+
+}
