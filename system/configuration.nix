@@ -3,13 +3,14 @@
 {
   imports =
     [ 
-      ./hardware-configuration.nix
-      ./services.nix
-      ./locale.nix
-      ./network.nix
-      ./boot.nix
-      ./sound.nix
-      ./packages.nix
+      ./drive/hardware-configuration.nix
+
+      ./config/services.nix
+      ./config/locale.nix
+      ./config/network.nix
+      ./config/boot.nix
+      ./config/sound.nix
+      ./config/packages.nix
     ];
 
   # DO NOT CHANGE
@@ -31,4 +32,14 @@
   time.timeZone = "Europe/Stockholm";
   # TTY language
   console.keyMap = "sv-latin1";
+
+# Move the overlays to its own module
+nixpkgs.overlays = [
+(final: prev: {
+    dwm = prev.dwm.overrideAttrs (old: { src = /home/fool/.config/suckless/dwm; });
+    dwmblocks = prev.dwmblocks.overrideAttrs (old: { src = /home/fool/.config/suckless/blocks; });
+  })
+];
+
+
 }

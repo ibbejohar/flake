@@ -25,12 +25,12 @@
             enable = true;
             greeters.mini = {
               enable = true;
-              user = "${username}";
+              user = "fool";
               extraConfig = ''
                 [greeter]
                 show-password-label = true
                 invalid-password-text = Who The Hell Are You?
-                password-aligment = left
+                password-alignment = left
                 [greeter-theme]
                 font = "JetBrains Mono Nerd Font";
                 font-size = 15px
@@ -53,12 +53,5 @@
     # openssh.enable = true;
   };
 
-# Move the overlays to its own module
-nixpkgs.overlays = [
-(final: prev: {
-    dwm = prev.dwm.overrideAttrs (old: { src = builtins.fetchGit "https://github.com/ibbejohar/dwm"; });
-    dwmblocks = prev.dwm.overrideAttrs (old: { src = builtins.fetchGit "https://github.com/ibbejohar/blocks"; });
-  })
-];
 
 }
