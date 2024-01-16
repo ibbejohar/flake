@@ -7,6 +7,7 @@
      firefox
      fuse
      git
+     rofi
      neovim
      ntfs3g
      wget

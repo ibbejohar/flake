@@ -7,6 +7,7 @@ programs = {
     enable = true;
     bashrcExtra = ''
     echo "Be So Good That They Can't Ignore You"
+    export PS1='\[\e[0;1;31m\][\[\e[0;1;38;5;37m\]\u\[\e[0;1;31m\]] \[\e[0;38;5;73m\]\W\[\e[0;1m\] ♠ \[\e[0m\]'
     set -o vi
     # bind -x '"zd\t": zd'
     '';

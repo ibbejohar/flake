@@ -23,9 +23,6 @@
     isNormalUser = true;
     description = "fool";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      firefox
-    ];
   };
 
   nixpkgs.config.allowUnfree = true;

@@ -39,6 +39,7 @@
       pkg-config
       porsmo
       prismlauncher
+      pulsemixer
       qalculate-gtk
       qbittorrent
       rust-analyzer
