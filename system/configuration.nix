@@ -13,6 +13,7 @@
       ./config/packages.nix
       ./config/hardware.nix
       ./config/vm.nix
+      ./config/tty.nix
     ];
 
   # DO NOT CHANGE
