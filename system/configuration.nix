@@ -11,6 +11,8 @@
       ./config/boot.nix
       ./config/sound.nix
       ./config/packages.nix
+      ./config/hardware.nix
+      ./config/vm.nix
     ];
 
   # DO NOT CHANGE
@@ -19,10 +21,13 @@
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  users.users.${username} = {
-    isNormalUser = true;
-    description = "fool";
-    extraGroups = [ "networkmanager" "wheel" ];
+  users = {
+    users.${username} = {
+      isNormalUser = true;
+      description = "fool";
+      extraGroups = [ "networkmanager" "wheel" "libvirtd" "lp" ];
+    };
+    mutableUsers = false;
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -37,6 +42,5 @@ nixpkgs.overlays = [
     dwmblocks = prev.dwmblocks.overrideAttrs (old: { src = /home/fool/.config/suckless/blocks; });
   })
 ];
-
 
 }

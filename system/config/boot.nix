@@ -2,10 +2,11 @@
 
 {
   boot = {
+    swraid.enable = false;
     loader = {
-      grub.enable = true;
-      grub.device = "/dev/vda";
-      grub.useOSProber = true;
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
     };
+    extraModprobeConfig = "options kvm_intel nested=1";
   };
 }

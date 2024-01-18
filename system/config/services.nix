@@ -12,9 +12,6 @@
       xkbVariant = "nodeadkeys";
 
       #videoDrivers = [ "nvidia" ];
-      #screenSection = ''
-      #Option      "metamodes" "nvidia-auto-select +0+0 {ForceCompositionPipeline=On}"
-      #'';
 
       windowManager.dwm.enable = true;
 
