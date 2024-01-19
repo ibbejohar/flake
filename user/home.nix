@@ -18,6 +18,8 @@ imports = [
 ./config/shell/profile.nix
 ./config/tmux/tmux.nix
 ./config/zathura/zathura.nix
+./config/rofi/rofi.nix
+./config/firefox/firefox.nix
 ];
 
 nixpkgs.config.allowUnfree = true;
