@@ -41,6 +41,8 @@ programs = {
     hibernate="systemctl hibernate";
     code = "cd ~/Documents/code";
 
+    flake = "sudo nixos-rebuild switch --flake ~/.config/flake";
+
     };
   };
 };
