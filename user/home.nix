@@ -20,6 +20,7 @@ imports = [
 ./config/zathura/zathura.nix
 ./config/rofi/rofi.nix
 ./config/firefox/firefox.nix
+./config/gtk/gtk.nix
 ];
 
 nixpkgs.config.allowUnfree = true;
