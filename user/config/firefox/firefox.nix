@@ -3,6 +3,24 @@
 {
   programs.firefox = {
     enable = true;
+    profiles.minimal = {
+      id = 0;
+      name = "minimal";
+      isDefault = true;
+      path = "minimal";
+      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+        ublock-origin
+        vimium
+      ];
+      settings = {
+        "browser.startup.homepage" = "https://github.com/ibbejohar";
+        "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+        "browser.newtabpage.activity-stream.feeds.topsites" = false;
+        "browser.search.suggest.enabled" = false;
+        "dom.security.https_only_mode" = true;
+        "general.autoScroll" = true;
+      };
+    };
     policies = {
       DisableFormHistory = true;
       DisableFirefoxAccounts = true;
@@ -24,7 +42,6 @@
         Fingerprinting = true;
         EmailTracking = true;
       };
-      profiles."default".extensions = with pkgs.nur.repos.rycee.firefox-addons; [ ublock-origin ];
     };
   };
 }
