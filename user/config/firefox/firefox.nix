@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+
+  imports = [
+    ./userChrome.nix
+  ];
+
   programs.firefox = {
     enable = true;
     profiles.minimal = {
