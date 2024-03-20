@@ -25,6 +25,8 @@
         "browser.search.suggest.enabled" = false;
         "dom.security.https_only_mode" = true;
         "general.autoScroll" = true;
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "browser.tabs.inTitlebar" = 0;
       };
     };
     policies = {
@@ -36,7 +38,7 @@
       DisableBuiltinPDFViewer = true;
       NetworkPrediction = false;
       PasswordManagerEnabled = false;
-      BlockAboutConfig = true;
+      BlockAboutConfig = false;
       WebsiteFilter = {
         Block = ["*://*.youtube.com/*"];
       };
