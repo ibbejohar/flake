@@ -28,7 +28,7 @@
       description = "fool";
       extraGroups = [ "networkmanager" "wheel" "libvirtd" "lp" ];
     };
-#    mutableUsers = false;
+    mutableUsers = false;
   };
 
   nixpkgs.config.allowUnfree = true;
