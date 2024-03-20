@@ -10,6 +10,7 @@
       bk
       cargo
       cinnamon.nemo
+      pulsemixer
       cryptsetup
       deno
       discord
