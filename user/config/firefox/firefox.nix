@@ -11,6 +11,7 @@
       extensions = with pkgs.nur.repos.rycee.firefox-addons; [
         ublock-origin
         vimium
+        privacy-badger
       ];
       settings = {
         "browser.startup.homepage" = "https://github.com/ibbejohar";
@@ -30,6 +31,10 @@
       DisableBuiltinPDFViewer = true;
       NetworkPrediction = false;
       PasswordManagerEnabled = false;
+      BlockAboutConfig = true;
+      WebsiteFilter = {
+        Block = ["*://*.youtube.com/*"];
+      };
       # Disable ability to connect to public wifi
       CaptivePortal = false;
       Cookies = { 
