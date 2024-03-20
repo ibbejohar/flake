@@ -11,7 +11,7 @@
       layout = "se";
       xkbVariant = "nodeadkeys";
 
-      #videoDrivers = [ "nvidia" ];
+      videoDrivers = [ "nvidia" ];
 
       windowManager.dwm.enable = true;
 
