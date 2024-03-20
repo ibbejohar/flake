@@ -13,7 +13,7 @@
   outputs = inputs@{ self, nixpkgs, home-manager, nur, ... }:
   let
     username = "fool";
-    hostname = "Selfirah";
+    hostname = "Destroyer";
   in 
   {
     nixosConfigurations = { 
