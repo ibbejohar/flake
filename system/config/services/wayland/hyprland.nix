@@ -13,6 +13,6 @@
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
 
-  hardware..nvidia.modesetting.enable = true;
+  hardware.nvidia.modesetting.enable = true;
 
 }
