@@ -4,7 +4,7 @@
   services = {
     mpd = {
       enable = true;
-      musicDirectory = "/media/sdc1/music";
+      musicDirectory = "/media/ColdStorage/music";
       extraConfig = ''
 	audio_output {
 	type	"pulse"
