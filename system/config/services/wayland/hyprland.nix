@@ -4,7 +4,7 @@
 
   programs.hyprland = {
    enable = true;
-   nvidiaPacthes = true;
+   nvidiaPatches = true;
    xwayland.enable = true;
 
   };
