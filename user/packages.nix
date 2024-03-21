@@ -3,7 +3,9 @@
 {
   home = {
     packages = with pkgs; [
-      kitty
+      waybar
+      jq
+      socat
       angband
       anki
       audacity
