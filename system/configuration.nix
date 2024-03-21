@@ -25,7 +25,7 @@
   users = {
     users.${username} = {
       isNormalUser = true;
-      description = "User: ${username}";
+      description = "fool";
       extraGroups = [ "networkmanager" "wheel" "libvirtd" "lp" ];
     };
     #mutableUsers = false;
