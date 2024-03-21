@@ -4,16 +4,16 @@
   imports =
     [ 
       ./drive/hardware-configuration.nix
+      ./packages.nix
 
-      ./config/services.nix
-      ./config/locale.nix
-      ./config/network.nix
-      ./config/boot.nix
-      ./config/sound.nix
-      ./config/packages.nix
-      ./config/hardware.nix
-      ./config/vm.nix
-      ./config/tty.nix
+      ./config/boot/boot.nix
+      ./config/hardware/hardware.nix
+      ./config/locale/locale.nix
+      ./config/network/network.nix
+      ./config/services/services.nix
+      ./config/sound/sound.nix
+      ./config/tty/tty.nix
+      ./config/vm/vm.nix
     ];
 
   # DO NOT CHANGE
@@ -25,7 +25,7 @@
   users = {
     users.${username} = {
       isNormalUser = true;
-      description = "fool";
+      description = "User: ${username}";
       extraGroups = [ "networkmanager" "wheel" "libvirtd" "lp" ];
     };
     #mutableUsers = false;
