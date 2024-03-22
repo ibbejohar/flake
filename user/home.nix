@@ -7,7 +7,7 @@ imports = [
 
 ./config/alacritty/alacritty.nix
 ./config/foot/foot.nix
-./config/waybar/waybar.nix
+#./config/waybar/waybar.nix
 ./config/dunst/dunst.nix
 ./config/github/gh.nix
 ./config/mpd/mpd.nix

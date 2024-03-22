@@ -5,7 +5,7 @@
     nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.stable;
       # Fix Screen Tearing
-      forceFullCompositionPipeline = true;
+#      forceFullCompositionPipeline = true;
       nvidiaSettings = true;
     };
   };
