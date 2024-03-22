@@ -2,7 +2,7 @@
 
 {
   programs.foot = {
-    enable = true
+    enable = true;
     server.enable = true;
   };
 }
