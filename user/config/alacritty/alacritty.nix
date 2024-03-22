@@ -11,6 +11,7 @@
 	    y = 4;
           };
           dynamic_padding = true;
+	  opacity = 0.8;
 	};
         cursor = {
             style = {

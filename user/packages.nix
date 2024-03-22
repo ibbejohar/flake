@@ -3,7 +3,7 @@
 {
   home = {
     packages = with pkgs; [
-      waybar
+      tofi
       jq
       socat
       angband
