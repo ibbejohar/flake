@@ -11,6 +11,7 @@
       ./config/locale/locale.nix
       ./config/network/network.nix
       ./config/services/services.nix
+#      ./config/steam/steam.nix
       ./config/sound/sound.nix
       ./config/tty/tty.nix
       ./config/vm/vm.nix
@@ -37,5 +38,12 @@
   console.keyMap = "sv-latin1";
 
   programs.dconf.enable = true;
+
+
+  programs.steam = {
+  enable = true;
+  remotePlay.openFirewall = false; # Open ports in the firewall for Steam Remote Play
+  dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  };
 
 }

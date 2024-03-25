@@ -40,7 +40,7 @@
       PasswordManagerEnabled = false;
       BlockAboutConfig = false;
       WebsiteFilter = {
-        Block = ["*://*.youtube.com/*"];
+#        Block = ["*://*.youtube.com/*"];
       };
       # Disable ability to connect to public wifi
       CaptivePortal = false;

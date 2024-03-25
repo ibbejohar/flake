@@ -3,8 +3,8 @@
 {
   imports = 
   [
-   #./x11/x11.nix
-   ./wayland/hyprland.nix
+  #./x11/x11.nix
+  ./wayland/hyprland.nix
   ];
 
   services = {

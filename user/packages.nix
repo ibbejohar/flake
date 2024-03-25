@@ -3,9 +3,7 @@
 {
   home = {
     packages = with pkgs; [
-      tofi
-      jq
-      socat
+      steamPackages.steamcmd
       angband
       anki
       audacity
@@ -13,7 +11,6 @@
       bk
       cargo
       cinnamon.nemo
-      pulsemixer
       cryptsetup
       deno
       discord
@@ -29,12 +26,12 @@
       htmlq
       htop
       imagemagick
+      jq
       libqalculate
       luajit
       luajitPackages.magick
       luarocks
       lutris
-      python3
       lxappearance
       maim
       mpc-cli
@@ -45,6 +42,7 @@
       nodePackages_latest.pyright
       nodePackages_latest.readability-cli
       nodejs
+      nsxiv
       openssl
       pass
       passExtensions.pass-tomb 
@@ -53,16 +51,19 @@
       popcorntime
       porsmo
       prismlauncher
+      pulsemixer
+      python3
       qalculate-gtk
       qbittorrent
       rust-analyzer
       rustc
       sc-im
       slides
-      nsxiv
+      socat
       telegram-desktop
       texlive.combined.scheme-full
       thunderbird
+      tofi
       tomb
       tuir
       ueberzugpp
