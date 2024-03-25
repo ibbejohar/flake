@@ -3,7 +3,6 @@
 {
   home = {
     packages = with pkgs; [
-      steamPackages.steamcmd
       angband
       anki
       audacity
@@ -60,6 +59,8 @@
       sc-im
       slides
       socat
+      steamPackages.steamcmd
+      swaybg
       telegram-desktop
       texlive.combined.scheme-full
       thunderbird
