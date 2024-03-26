@@ -1,6 +1,10 @@
 { config, pkgs, username, ... }:
 
 {
+  imports = [
+    ./greetd.nix
+
+  ];
 
   programs.hyprland = {
    enable = true;
