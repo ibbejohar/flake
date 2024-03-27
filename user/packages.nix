@@ -3,6 +3,9 @@
 {
   home = {
     packages = with pkgs; [
+      libnotify
+      hyprlock
+      hypridle
       angband
       anki
       audacity
