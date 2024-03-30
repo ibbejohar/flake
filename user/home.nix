@@ -14,7 +14,7 @@ imports = [
 ./config/mpd/mpd.nix
 ./config/ncmpcpp/ncmpcpp.nix
 ./config/newsboat/newsboat.nix
-./config/nvim/init.nix
+#./config/nvim/init.nix
 ./config/pandoc/pandoc.nix
 ./config/shell/bashrc.nix
 ./config/shell/inputrc.nix
@@ -27,6 +27,7 @@ imports = [
 ];
 
 nixpkgs.config.allowUnfree = true;
+
 
 home = {
 

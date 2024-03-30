@@ -44,6 +44,9 @@ programs = {
     flake = "sudo nixos-rebuild switch --flake ~/.config/flake";
 
     };
+    shellOptions = [
+      "cdspell"
+    ];
   };
 };
 }

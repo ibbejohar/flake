@@ -3,6 +3,10 @@
 {
   home = {
     packages = with pkgs; [
+      luajitPackages.rocks-nvim
+      hypridle
+      hyprlock
+      wl-clipboard
       angband
       anki
       audacity
@@ -27,7 +31,7 @@
       imagemagick
       jq
       libqalculate
-      luajit
+      lua51Packages.lua
       luajitPackages.magick
       luarocks
       lutris
