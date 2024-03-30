@@ -1,5 +1,7 @@
-{ pkgs, config, ... }: 
-
+{ pkgs, config, inputs, system, ... }: 
+let
+  neovim-nightly = inputs.neovim-nightly-overlay.packages.${system}.neovim;
+in
 {
   imports = [
    #./lua/config.nix
@@ -13,7 +15,7 @@
  
   programs.neovim = {
     enable = true;
-    package = pkgs.neovim-unwrapped;
+    package = neovim-nightly;
     defaultEditor = true;
     vimAlias = true;
     extraLuaPackages = ps: [ ps.magick ];

@@ -38,6 +38,8 @@
   console.keyMap = "sv-latin1";
 
   programs.dconf.enable = true;
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
 
   programs.steam = {
