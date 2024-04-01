@@ -3,7 +3,9 @@
 {
   home = {
     packages = with pkgs; [
-      luajitPackages.rocks-nvim
+      brave
+      nyxt
+    distrobox
       hypridle
       hyprlock
       wl-clipboard
@@ -31,9 +33,6 @@
       imagemagick
       jq
       libqalculate
-      lua51Packages.lua
-      luajitPackages.magick
-      luarocks
       lutris
       lxappearance
       maim
@@ -45,6 +44,7 @@
       nodePackages_latest.pyright
       nodePackages_latest.readability-cli
       nodejs
+      luajitPackages.magick
       nsxiv
       openssl
       pass

@@ -8,7 +8,7 @@
     sessionVariables = {
        EDITOR = "nvim";
        TERMINAL = "foot";
-       TERM = "footclient";
+       TERM = "foot";
        BROWSER = "firefox";
        DMENU = "rofi -dmenu";
        PDF = "zathura";

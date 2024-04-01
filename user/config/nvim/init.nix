@@ -18,6 +18,7 @@ in
     package = neovim-nightly;
     defaultEditor = true;
     vimAlias = true;
+    viAlias = true;
     extraLuaPackages = ps: [ ps.magick ];
   };
 
