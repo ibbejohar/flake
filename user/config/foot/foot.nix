@@ -7,7 +7,7 @@
     settings = {
       main = {
         font = "JetBrains Mono Nerd Font:size=13";
-	pad = "4x4";
+	pad = "4x0 center";
 
       };
       colors = {

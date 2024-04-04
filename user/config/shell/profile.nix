@@ -13,7 +13,7 @@
        DMENU = "rofi -dmenu";
        PDF = "zathura";
        VIDEO = "mpv";
-       PICTURE = "sxiv";
+       PICTURE = "nsxiv";
        NIXPKGS_ALLOW_INSECURE = 1;
 
        XDG_CONFIG_HOME = "$HOME/.config";
@@ -22,6 +22,9 @@
        XDG_STATE_HOME = "$HOME/.local/state";
        XDG_BIN_HOME = "$HOME/.local/bin";
 
+       # Mangal env
+       MANGAL_READER_PDF = "zathura";
+       MANGAL_DOWNLOADER_PATH = "$HOME/Documents/manga";
     };
   };
 }

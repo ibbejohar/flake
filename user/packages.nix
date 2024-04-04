@@ -3,22 +3,18 @@
 {
   home = {
     packages = with pkgs; [
-      brave
-      nyxt
-    distrobox
-      hypridle
-      hyprlock
-      wl-clipboard
       angband
       anki
       audacity
       bitwarden
       bk
+      brave
       cargo
       cinnamon.nemo
       cryptsetup
       deno
       discord
+      distrobox
       dunst
       eza
       feh
@@ -30,22 +26,26 @@
       go
       htmlq
       htop
+      hypridle
+      hyprlock
       imagemagick
       jq
       libqalculate
+      luajitPackages.magick
       lutris
       lxappearance
       maim
+      mangal
       mpc-cli
       mpd
       mpv
       newsboat
+      nodejs
       nodePackages_latest.bash-language-server
       nodePackages_latest.pyright
       nodePackages_latest.readability-cli
-      nodejs
-      luajitPackages.magick
       nsxiv
+      nyxt
       openssl
       pass
       passExtensions.pass-tomb 
@@ -77,11 +77,12 @@
       wezterm
       wiki-tui
       wineWowPackages.staging
+      wl-clipboard
       xclip
       youtube-tui
       yt-dlp
       zip
-      ];
+    ];
   };
 
 }
