@@ -27,6 +27,7 @@ programs = {
     "..." = "cd ../..";
     cal = "cal -w";
     pdf = "zathura";
+    sxiv = "nsxiv";
     shutdown = "shutdown now";
 
     home-switch = "home-manager switch";

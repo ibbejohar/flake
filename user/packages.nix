@@ -3,6 +3,9 @@
 {
   home = {
     packages = with pkgs; [
+      slurp
+      grim
+      julia-bin
       angband
       anki
       audacity
