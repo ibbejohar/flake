@@ -5,6 +5,7 @@
   [
   #./x11/x11.nix
   ./wayland/hyprland.nix
+  ./colemak/colemak-se.nix
   ];
 
   services = {
