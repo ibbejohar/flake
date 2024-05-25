@@ -3,6 +3,9 @@
 {
   home = {
     packages = with pkgs; [
+      vkd3d-proton
+      winetricks
+      vlc
       slurp
       grim
       julia-bin
