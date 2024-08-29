@@ -3,9 +3,9 @@
 {
   imports = 
   [
-  #./x11/x11.nix
+    ./x11/x11.nix
   #./wayland/hyprland.nix
-  ./wayland/gnome.nix
+#  ./wayland/gnome.nix
   ];
 
   services = {
