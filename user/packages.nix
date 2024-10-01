@@ -12,7 +12,6 @@
       angband
       anki
       audacity
-      bitwarden
       bk
       brave
       cargo
