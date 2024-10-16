@@ -7,6 +7,7 @@
       # Fix Screen Tearing
 #      forceFullCompositionPipeline = true;
       nvidiaSettings = true;
+      open = false;
     };
   };
 

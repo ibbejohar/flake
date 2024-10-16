@@ -12,7 +12,8 @@
       ./config/network/network.nix
       ./config/services/services.nix
 #      ./config/steam/steam.nix
-      ./config/sound/sound.nix
+# DEPRICIATED
+#      ./config/sound/sound.nix
       ./config/tty/tty.nix
       ./config/vm/vm.nix
     ];
