@@ -3,19 +3,12 @@
 {
   home = {
     packages = with pkgs; [
-      vkd3d-proton
-      winetricks
-      vlc
-      slurp
-      grim
-      julia-bin
       angband
-      anki
+      #anki
       audacity
       bk
       brave
       cargo
-      cinnamon.nemo
       cryptsetup
       deno
       discord
@@ -29,12 +22,14 @@
       gcc
       gimp
       go
+      grim
       htmlq
       htop
       hypridle
       hyprlock
       imagemagick
       jq
+      julia-bin
       libqalculate
       luajitPackages.magick
       lutris
@@ -44,13 +39,14 @@
       mpc-cli
       mpd
       mpv
+      nemo
       newsboat
-      nodejs
       nodePackages_latest.bash-language-server
-      nodePackages_latest.pyright
+      #nodePackages_latest.pyright
       nodePackages_latest.readability-cli
+      nodejs
       nsxiv
-      nyxt
+      #nyxt
       openssl
       pass
       passExtensions.pass-tomb 
@@ -67,11 +63,12 @@
       rustc
       sc-im
       slides
+      slurp
       socat
       steamPackages.steamcmd
       swaybg
-      telegram-desktop
-      texlive.combined.scheme-full
+      #telegram-desktop
+      ##  texlive.combined.scheme-full
       thunderbird
       tofi
       tomb
@@ -79,9 +76,11 @@
       ueberzugpp
       unrar-wrapper
       unzip
-      wezterm
+      vkd3d-proton
+      vlc
       wiki-tui
       wineWowPackages.staging
+      winetricks
       wl-clipboard
       xclip
       youtube-tui
