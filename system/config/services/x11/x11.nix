@@ -4,11 +4,11 @@
 {
   imports = 
   [
-    #./dwm.nix
-    ./awesome.nix
+    ./dwm.nix
+    #./awesome.nix
 
   ];
-
+  services = {
     xserver = {
       enable = true;
 
@@ -17,4 +17,5 @@
       xkb.variant = "nodeadkeys";
 
     };
+  };
 }

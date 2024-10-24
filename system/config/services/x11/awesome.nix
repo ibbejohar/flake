@@ -13,7 +13,7 @@
           luarocks
           luadbi-mysql
         ];
-      }
+      };
     };
   };
 }
