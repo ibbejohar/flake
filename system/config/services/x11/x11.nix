@@ -65,25 +65,18 @@ in {
       };
 
     };
-#    keyd = { 
-#      enable = true;
-#      keyboards = {
-#        default = {
-#          ids = [ "*" ];
-#          settings = {
-#            main = {
-#              capslock = "tap_hold 200 esc control";
-#            };
-#          };
-#        };
-#      };
-#    };
-keyd = {
-  enable = true;
-};
+    keyd = { 
+      enable = true;
+      keyboards = {
+        default = {
+          ids = [ "*" ];
+          settings = {
+            main = {
+              capslock = "overlord(esc, control)";
+            };
+          };
+        };
+      };
+    };
   };
-systemd.services.keyd.preStart = ''
-mkdir -p /etc/keyd
-echo 'capslock = tap_hold 200 esc control' > /etc/keyd/default.conf
-'';
 }
