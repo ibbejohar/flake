@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+     lua
      alacritty
      dwmblocks
      firefox
@@ -11,6 +12,9 @@
      neovim
      ntfs3g
      wget
+     rust-analyzer
+     cargo
+     lua-language-server
   ];
 
   fonts.packages = with pkgs; [
@@ -19,6 +23,7 @@
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
       sil-padauk
+      texlivePackages.quran
   ];
 
 }

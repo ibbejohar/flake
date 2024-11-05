@@ -23,7 +23,7 @@ programs = {
 
     c = "clear";
     e = "exit";
-    df = "df -h";
+    df = "df -h -x tmpfs";
     ".." = "cd ..";
     "..." = "cd ../..";
     cal = "cal -w";
@@ -33,7 +33,7 @@ programs = {
 
     home-switch = "home-manager switch";
 
-    sdc1 = "cd /media/sdc1";
+    sdc1 = "cd /media/ColdStorage";
 
     yt-audio = "yt-dlp -x --audio-format mp3 --audio-quality 0";
     zd = "source zd";

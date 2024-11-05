@@ -4,11 +4,11 @@
   home = {
     packages = with pkgs; [
       angband
+      texlivePackages.quran
       #anki
       audacity
       bk
       brave
-      cargo
       cryptsetup
       deno
       discord
@@ -29,7 +29,7 @@
       hyprlock
       imagemagick
       jq
-      julia-bin
+      #julia-bin
       libqalculate
       luajitPackages.magick
       lutris
@@ -41,8 +41,6 @@
       mpv
       nemo
       newsboat
-      nodePackages_latest.bash-language-server
-      #nodePackages_latest.pyright
       nodePackages_latest.readability-cli
       nodejs
       nsxiv
@@ -59,13 +57,10 @@
       python3
       qalculate-gtk
       qbittorrent
-      rust-analyzer
-      rustc
       sc-im
       slides
       slurp
       socat
-      steamPackages.steamcmd
       swaybg
       #telegram-desktop
       ##  texlive.combined.scheme-full

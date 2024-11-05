@@ -39,15 +39,12 @@
   console.keyMap = "sv-latin1";
 
   programs.dconf.enable = true;
-  virtualisation.libvirtd.enable = true;
-  virtualisation.podman.enable = true;
-  programs.virt-manager.enable = true;
 
 
-  programs.steam = {
-  enable = true;
-  remotePlay.openFirewall = false; # Open ports in the firewall for Steam Remote Play
-  dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  };
+#  programs.steam = {
+#  enable = true;
+#  remotePlay.openFirewall = false; # Open ports in the firewall for Steam Remote Play
+#  dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+#  };
 
 }
