@@ -80,10 +80,10 @@ in {
 #    };
 keyd = {
   enable = true;
-  configFile = "/etc/keyd/default.conf";
 };
+  };
 systemd.services.keyd.preStart = ''
+mkdir -p /etc/keyd
 echo 'capslock = tap_hold 200 esc control' > /etc/keyd/default.conf
 '';
-  };
 }
