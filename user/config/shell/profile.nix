@@ -3,7 +3,7 @@
 {
   home = {
     sessionPath = [
-          "$HOME/.local/bin"
+          "$HOME/.local/bin:$HOME/.cargo/bin"
     ];
     sessionVariables = {
        EDITOR = "nvim";

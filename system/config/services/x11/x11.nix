@@ -1,15 +1,15 @@
 { config, pkgs, username, ... }:
 let
   # Define the layout file content directly here.
-  colemakeSeFile = pkgs.writeTextFile {
-    name = "colemake-se";
+  colemakSeFile = pkgs.writeTextFile {
+    name = "colemak-se";
     text = ''
     // Colemak-SE symbols for xkb on X.org Server 7.x
     // 2018, github.com/motform/colemak-se. GPL3.
     // Only remaps keys that diff.
 
     partial alphanumeric_keys
-    xkb_symbols "colemake-se" {
+    xkb_symbols "colemak-se" {
 
       include "se(basic)"
       name[Group1]="Swedish (Colemak)";
@@ -56,11 +56,10 @@ in {
       xkb.layout = "se";
       xkb.variant = "nodeadkeys";
       xkb.extraLayouts = {
-        colemake-se = {
-          description = "Colemake Swedish layout";
+        colemak-se = {
+          description = "Colemak Swedish layout";
           languages = [ "sv" ];
-          #symbolsFile = "${self}/system/config/services/x11/xkb/colemake-se";
-          symbolsFile = "${colemakeSeFile}";
+          symbolsFile = "${colemakSeFile}";
         };
       };
 
@@ -72,7 +71,30 @@ in {
           ids = [ "*" ];
           settings = {
             main = {
-              capslock = "overlord(esc, control)";
+              #capslock = "overload(control, esc)";
+              #capslock = "overloadt(control, esc, 200)";
+              capslock = "overloadt2(control, esc, 200)";
+              leftcontrol = "menu";
+              compose = "toggle(colemak-se)";
+            };
+            colemak-se = {
+              e = "f";
+              r = "p";
+              t = "g";
+              y = "j";
+              u = "l";
+              i = "u";
+              o = "y";
+              p = "semicolon"; # ö
+              s = "r";
+              d = "s";
+              f = "t";
+              g = "d";
+              j = "n";
+              k = "e";
+              l = "i";
+              semicolon = "o"; # ö till o
+              n = "k";
             };
           };
         };

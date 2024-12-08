@@ -11,7 +11,7 @@
       ./config/locale/locale.nix
       ./config/network/network.nix
       ./config/services/services.nix
-#      ./config/steam/steam.nix
+      ./config/steam/steam.nix
 # DEPRICIATED
 #      ./config/sound/sound.nix
       ./config/tty/tty.nix
@@ -39,6 +39,8 @@
   console.keyMap = "sv-latin1";
 
   programs.dconf.enable = true;
+  fonts.fontconfig.antialias = true;
+  home-manager.backupFileExtension = "hm-backup";
 
 
 #  programs.steam = {

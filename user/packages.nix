@@ -3,6 +3,9 @@
 {
   home = {
     packages = with pkgs; [
+      scrot
+      newsflash
+      love
       angband
       texlivePackages.quran
       #anki
@@ -32,6 +35,7 @@
       #julia-bin
       libqalculate
       luajitPackages.magick
+      luajitPackages.luarocks_bootstrap
       lutris
       lxappearance
       maim

@@ -39,6 +39,9 @@
       NetworkPrediction = false;
       PasswordManagerEnabled = false;
       BlockAboutConfig = false;
+      WebsiteFilter = {
+        Block = [];
+      };
       # Disable ability to connect to public wifi
       CaptivePortal = false;
       Cookies = { 

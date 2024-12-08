@@ -15,6 +15,7 @@
       set -g renumber-windows on
       set -g prefix C-s
       set -g base-index 1
+      set -s escape-time 0
       setw -g pane-base-index 1
 
       bind-key h select-pane -L
