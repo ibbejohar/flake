@@ -13,6 +13,7 @@
       ./config/time/time.nix
       ./config/users/users.nix
       ./config/font/font.nix
+      ./config/vm/vm.nix
     ];
 
     nixpkgs.config.allowUnfree = true;
