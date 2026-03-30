@@ -11,6 +11,7 @@
     htop
    #timewarrior
     lua-language-server
+    luajitPackages.magick
     pulsemixer
     #rofi
     #wl-clipboard
@@ -30,7 +31,7 @@
     nixd
     ueberzugpp
    #libsixel
-   #xclip
+   xclip
    #maim
     libclang
     bibata-cursors
