@@ -1,0 +1,43 @@
+{ ... }:
+
+{
+
+  programs.tmux = {
+    enable = true;
+    mouse = true;
+    clock24 = true;
+    terminal = "screen-256color";
+    prefix = "C-s";
+    baseIndex = 1;
+    escapeTime = 0;
+    customPaneNavigationAndResize = true;
+    disableConfirmationPrompt = true;
+
+    # Dont forget to install plugin with prefix + I
+    extraConfig = ''
+      set-option -gas terminal-overrides "*:Tc"
+      set-option -gas terminal-overrides "*:RGB"
+      set-option -g status-position top
+      set -g renumber-windows on
+      setw -g pane-base-index 1
+
+      set -gq allow-passthrough on
+      set -g visual-activity off
+
+      bind-key h select-pane -L
+      bind-key j select-pane -D
+      bind-key k select-pane -U
+      bind-key l select-pane -R
+
+      set -g @minimal-tmux-status "top"
+      set -g @minimal-tmux-justify "left"
+      set -g @minimal-tmux-indicator false
+      set -g @minimal-tmux-status-right '#(date +"%H:%M")'
+
+      set -g @plugin 'tmux-plugins/tpm'
+      set -g @plugin 'niksingh710/minimal-tmux-status'
+      run '~/.config/tmux/plugins/tpm/tpm'
+     '';
+   };
+
+}
