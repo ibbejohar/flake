@@ -8,7 +8,7 @@
     ./config/github/gh.nix
     ./config/mpd/mpd.nix
     ./config/ncmpcpp/ncmpcpp.nix
-    #./config/nvim/nvim.nix
+    ./config/nvim/nvim.nix
     ./config/shell/bashrc.nix
     ./config/shell/inputrc.nix
     ./config/shell/profile.nix
