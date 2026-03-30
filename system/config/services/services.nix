@@ -24,7 +24,16 @@ services = {
     alsa.enable = true;
     alsa.support32Bit = true;
   };
-   openssh.enable = true;
+  openssh = {
+    enable = true;
+    ports = [ 5432 ];
+    settings = {
+      PasswordAuthentication = false;
+      KbdInteractiveAuthentication = false;
+      PermitRootLogin = "no";
+      AllowUsers = [ "fool" ];
+    };
+  };
 
   keyd = {
     enable = true;
