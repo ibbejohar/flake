@@ -4,7 +4,7 @@
   hardware.nvidia = {
     #package = config.boot.kernelPackages.nvidiaPackages.stable;
     #package = config.boot.kernelPackages.nvidiaPackages.production;
-    package = config.boot.kernelPackages.nvidiaPackages_580;
+    package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
     nvidiaSettings = true;
     modesetting.enable = true;
     open = false;
