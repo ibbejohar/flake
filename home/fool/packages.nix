@@ -26,7 +26,7 @@
     mpc
    #popcorntime
     firefox
-    #foot
+    foot
     bash-language-server
     nixd
     ueberzugpp

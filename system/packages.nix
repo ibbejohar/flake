@@ -14,7 +14,7 @@ in
     keyd
     gcc
    #inputs.norgolith.packages.${pkgs.system}.default
-   #dwmblocks
+   dwmblocks
    st-custom
   ];
 
