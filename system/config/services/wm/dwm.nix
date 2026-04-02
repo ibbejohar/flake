@@ -1,6 +1,6 @@
 { config, pkgs, inputs, system, ... }:
 let
-  dwm-custom = inputs.dwl-custom.packages.${system}.dwl;
+  dwm-custom = inputs.dwm-custom.packages.${system}.dwm;
 in
 {
   services.xserver = {
