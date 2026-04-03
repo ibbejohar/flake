@@ -9,16 +9,16 @@ in
     wget
     eza
    #dwlb
-   #wineWowPackages.staging
-   #winetricks
+   wineWow64Packages.staging
+   winetricks
     keyd
     gcc
    #inputs.norgolith.packages.${pkgs.system}.default
-   dwmblocks
+   #dwmblocks
    st-custom
   ];
 
   programs.steam = {
-    enable = false;
+    enable = true;
   };
 }

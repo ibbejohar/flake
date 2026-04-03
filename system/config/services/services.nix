@@ -7,14 +7,14 @@
   #./wm/river.nix
   #./wm/hyprland.nix
   # ./wm/dwl.nix
-   ./wm/dwm.nix
-  #./wm/mangowc.nix
+  #./wm/dwm.nix
+  ./wm/mangowc.nix
 ];
 
 services = {
   xserver = {
     enable = true;
-    displayManager.lightdm.enable = false;
+    displayManager.lightdm.enable = true;
     xkb.layout = "se";
   };
   printing.enable = false;
@@ -38,10 +38,13 @@ services = {
 
   keyd = {
     enable = true;
+    keyboards.corne.extraConfig = ''
+    '';
     keyboards.corne.settings = {
       global = {
-        default_layout = "secolemak-se";
+        default_layout = "se";
       };
+      "se:layout" = { };
       "colemak-se:layout" = {
         q = "q";
         w = "w";
@@ -76,6 +79,8 @@ services = {
       main = {
         capslock = "overloadt(control, esc, 200)";
         tab = "overloadt(sym, tab, 200)";
+        compose = "setlayout(colemak-se)";
+        home = "setlayout(se)";
       };
       sym = {
         q = "macro(_)";            # ?

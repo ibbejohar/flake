@@ -7,16 +7,17 @@
   home.packages = with pkgs; [
     #entr
     moreutils
+    dracula-theme
     discord
     htop
    #timewarrior
     lua-language-server
     luajitPackages.magick
     pulsemixer
-    #rofi
+    rofi
     #wl-clipboard
-    #grim
-    #slurp
+    grim
+    slurp
     #swaybg
     bitwarden-desktop
     nemo
@@ -52,5 +53,6 @@
     zoom-us
    #obsidian
    #libreoffice-qt-fresh
+   mpdris2
   ];
 }

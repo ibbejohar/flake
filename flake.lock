@@ -18,6 +18,26 @@
         "type": "github"
       }
     },
+    "dwm-custom": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1775073516,
+        "narHash": "sha256-/ZgGHeRUdjXMRdc+IO9JGG/wpBcGqXHHId8b7CxpRWQ=",
+        "owner": "ibbejohar",
+        "repo": "dwm",
+        "rev": "a9164604b67aa2229796bc9d5f960c0daeb7db5d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ibbejohar",
+        "repo": "dwm",
+        "type": "github"
+      }
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
@@ -231,6 +251,7 @@
     "root": {
       "inputs": {
         "dwl-custom": "dwl-custom",
+        "dwm-custom": "dwm-custom",
         "home-manager": "home-manager",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nixpkgs": "nixpkgs_3",
