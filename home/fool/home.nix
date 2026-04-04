@@ -16,6 +16,7 @@
     ./config/fzf/fzf.nix
     ./config/tmux/tmux.nix
     ./config/picom/picom.nix
+    ./config/obs/obs.nix
   ];
 
   programs.home-manager.enable = true;
