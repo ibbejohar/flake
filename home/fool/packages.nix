@@ -48,7 +48,6 @@
    #inkscape
    #vintagestory
    #audacity
-   #obs-studio
     ffmpeg_8-full
     zoom-us
    #obsidian
