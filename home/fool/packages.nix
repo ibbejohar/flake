@@ -11,7 +11,7 @@
    bitwarden-desktop
    discord
    dracula-theme
-    #entr
+   #entr
    #feh
    ffmpeg_8-full
    firefox
@@ -21,7 +21,9 @@
    #inkscape
    #inotify-tools
    #jq
-   libclang
+   clang-tools
+   llvmPackages.clang
+   libcxx
    #libreoffice-qt-fresh
    #libsixel
    luajitPackages.magick

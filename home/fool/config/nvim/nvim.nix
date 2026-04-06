@@ -9,7 +9,7 @@ in
       defaultEditor = true;
       vimAlias = true;
       viAlias = true;
-      extraLuaPackages = ps: [ ps.magick ];
-      extraPackages =  [ pkgs.imagemagick ];
+      #extraLuaPackages = ps: [ ps.magick ];
+      #extraPackages =  [ pkgs.imagemagick ];
     };
   }
