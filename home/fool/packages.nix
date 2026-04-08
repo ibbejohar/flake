@@ -54,5 +54,6 @@
    yt-dlp
    zip
    zoom-us
+   zathura
   ];
 }
