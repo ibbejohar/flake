@@ -55,5 +55,6 @@
    zip
    zoom-us
    zathura
+   rust-analyzer
   ];
 }
