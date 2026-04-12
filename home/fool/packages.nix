@@ -47,7 +47,7 @@
    ueberzugpp
    unrar
    unzip
-   #vintagestory
+   vintagestory
    wl-clipboard
    xclip
    #yewtube
@@ -55,6 +55,8 @@
    zip
    zoom-us
    zathura
-   rust-analyzer
+   #rust-analyzer
+   rustup
+   gdb # C/C++/Rust Debugger
   ];
 }
