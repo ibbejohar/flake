@@ -54,7 +54,6 @@
    yt-dlp
    zip
    zoom-us
-   zathura
    #rust-analyzer
    rustup
    gdb # C/C++/Rust Debugger

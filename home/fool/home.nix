@@ -17,6 +17,7 @@
     ./config/tmux/tmux.nix
     ./config/picom/picom.nix
     ./config/obs/obs.nix
+    ./config/zathura/zathura.nix
   ];
 
   programs.home-manager.enable = true;
