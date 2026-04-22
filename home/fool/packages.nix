@@ -58,5 +58,6 @@
    rustup
    gdb # C/C++/Rust Debugger
    prismlauncher
+   swayimg
   ];
 }
