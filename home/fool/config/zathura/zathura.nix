@@ -1,4 +1,4 @@
-{ config, ... }:
+{ pkgs, config, ... }:
 
 {
   programs.zathura = {
@@ -9,9 +9,10 @@
       scroll-page-aware = true;
       smooth-scroll = true;
       smooth-full-overlap = 0.01;
-      scroll-step = 100;
+      scroll-step = 10;
 
       zoom-min = 10;
+      zoom = 100;
       guioptions = "";
 
       font = "inconsolata 15";
@@ -48,6 +49,14 @@
       recolor-reverse-video = true; # exclude image to invert
       recolor-keephue = true;
       render-loading = false;
+
+      selection-clipboard = "clipboard";
+    };
+
+    mappings = {
+      j = "scroll down";
+      k = "scroll up";
+
     };
   };
 }

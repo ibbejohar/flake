@@ -1,6 +1,7 @@
-{ config, ... }:
+{ pkgs, config, ... }:
 
 {
-	virtualisation.libvirtd.enable = true;
-	programs.virt-manager.enable = true;
+  virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd.qemu.vhostUserPackages = [ pkgs.virtiofsd ];
+  programs.virt-manager.enable = true;
 }
