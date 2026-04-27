@@ -59,5 +59,6 @@
    gdb # C/C++/Rust Debugger
    prismlauncher
    swayimg
+   gamemode
   ];
 }
