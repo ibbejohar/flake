@@ -5,7 +5,6 @@
   enable = true;
   qemu = {
 	  vhostUserPackages = [ pkgs.virtiofsd ]; 
-	  vergl = true;
   };
   };
 
