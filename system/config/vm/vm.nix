@@ -1,7 +1,13 @@
 { pkgs, config, ... }:
 
 {
-  virtualisation.libvirtd.enable = true;
-  virtualisation.libvirtd.qemu.vhostUserPackages = [ pkgs.virtiofsd ];
+  virtualisation.libvirtd = {
+  enable = true;
+  qemu = {
+	  vhostUserPackages = [ pkgs.virtiofsd ]; 
+	  vergl = true;
+  };
+  };
+
   programs.virt-manager.enable = true;
 }
