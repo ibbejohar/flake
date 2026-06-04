@@ -39,12 +39,11 @@
 
 stdenv.mkDerivation rec {
   pname = "motivewave";
-  version = "7.0.25"; # Change this to match the exact version you download
+  version = "7.0.25";
 
-  # Manually fetch or point to your downloaded .deb file
   src = fetchurl {
     url = "https://www.motivewave.com/update/download.do?file_type=LINUX";
-    hash = "1jf10pbbwjqxnijvjkmla55sgrnscsbqsj1dpsk50ifvfqqa7wqp"; # Run 'nix-hash --to-base32' or leave blank to get correct hash
+    hash = "1jf10pbbwjqxnijvjkmla55sgrnscsbqsj1dpsk50ifvfqqa7wqp"; 
   };
 
   nativeBuildInputs = [
@@ -98,7 +97,7 @@ stdenv.mkDerivation rec {
 
     # Fix the wrapper launcher to point inside the Nix store and inject NVIDIA variables
     makeWrapper $out/share/motivewave/jre/bin/motivewave $out/bin/motivewave \
-      --prefix LD_LIBRARY_PATH : "${stdenv.lib.makeLibraryPath buildInputs}:/run/opengl-driver/lib" \
+      --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath buildInputs}:/run/opengl-driver/lib" \
       --set __GLX_VENDOR_LIBRARY_NAME nvidia \
       --set MESA_LOADER_DRIVER_OVERRIDE nvidia \
       --set MESA_GL_VERSION_OVERRIDE 4.5 \
