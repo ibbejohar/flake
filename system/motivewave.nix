@@ -1,0 +1,113 @@
+{ stdenv
+, fetchurl
+, dpkg
+, autoPatchelfHook
+, makeWrapper
+, alsa-lib
+, atk
+, cairo
+, cups
+, dbus
+, expat
+, fontconfig
+, freetype
+, gdk-pixbuf
+, glib
+, gtk3
+, libdrm
+, libGL
+, libglvnd
+, libX11
+, libxcb
+, libXcomposite
+, libXcursor
+, libXdamage
+, libXext
+, libXfixes
+, libXi
+, libXrandr
+, libXrender
+, libXtst
+, libXxf86vm
+, nss
+, nspr
+, pango
+, systemd
+, zlib
+}:
+
+stdenv.mkDerivation rec {
+  pname = "motivewave";
+  version = "7.0.25"; # Change this to match the exact version you download
+
+  # Manually fetch or point to your downloaded .deb file
+  src = fetchurl {
+    url = "https://www.motivewave.com/update/download.do?file_type=LINUX";
+    hash = "1jf10pbbwjqxnijvjkmla55sgrnscsbqsj1dpsk50ifvfqqa7wqp"; # Run 'nix-hash --to-base32' or leave blank to get correct hash
+  };
+
+  nativeBuildInputs = [
+    dpkg
+    autoPatchelfHook
+    makeWrapper
+  ];
+
+  buildInputs = [
+    alsa-lib
+    atk
+    cairo
+    cups
+    dbus
+    expat
+    fontconfig
+    freetype
+    gdk-pixbuf
+    glib
+    gtk3
+    libdrm
+    libGL
+    libglvnd
+    libX11
+    libxcb
+    libXcomposite
+    libXcursor
+    libXdamage
+    libXext
+    libXfixes
+    libXi
+    libXrandr
+    libXrender
+    libXtst
+    libXxf86vm
+    nss
+    nspr
+    pango
+    systemd
+    zlib
+  ];
+
+  unpackPhase = "dpkg-deb -x $src .";
+
+  installPhase = ''
+    runHook preInstall
+
+    mkdir -p $out/bin $out/share
+    cp -r usr/share/motivewave $out/share/
+    cp -r usr/share/applications $out/share/ 2>/dev/null || true
+
+    # Fix the wrapper launcher to point inside the Nix store and inject NVIDIA variables
+    makeWrapper $out/share/motivewave/jre/bin/motivewave $out/bin/motivewave \
+      --prefix LD_LIBRARY_PATH : "${stdenv.lib.makeLibraryPath buildInputs}:/run/opengl-driver/lib" \
+      --set __GLX_VENDOR_LIBRARY_NAME nvidia \
+      --set MESA_LOADER_DRIVER_OVERRIDE nvidia \
+      --set MESA_GL_VERSION_OVERRIDE 4.5 \
+      --add-flags "-Dprism.order=es2,es1,sw,j2d -Dsun.java2d.opengl=true"
+
+    runHook postInstall
+  '';
+
+  meta = {
+    description = "MotiveWave Trading Platform";
+    homepage = "https://www.motivewave.com/";
+  };
+}
