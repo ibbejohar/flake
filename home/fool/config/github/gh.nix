@@ -7,8 +7,10 @@
     };
     git = {
       enable = true;
-      user.name = "Ibrahim Johar";
-      user.email = "ibbe.johar@gmail.com";
+      settings = {
+        user.name = "Ibrahim Johar";
+        user.email = "ibbe.johar@gmail.com";
+      };
       };
     };
 }
