@@ -10,6 +10,7 @@
 , cups
 , dbus
 , expat
+, ffmpeg
 , fontconfig
 , freetype
 , gdk-pixbuf
@@ -42,7 +43,7 @@ stdenv.mkDerivation rec {
   version = "7.0.25";
 
   src = fetchurl {
-    url = "https://www.motivewave.com/update/download.do?file_type=LINUX";
+    url = "https://motivewave.com";
     hash = "sha256:1jf10pbbwjqxnijvjkmla55sgrnscsbqsj1dpsk50ifvfqqa7wqp"; 
   };
 
@@ -59,6 +60,7 @@ stdenv.mkDerivation rec {
     cups
     dbus
     expat
+    ffmpeg
     fontconfig
     freetype
     gdk-pixbuf
@@ -86,6 +88,26 @@ stdenv.mkDerivation rec {
     zlib
   ];
 
+  # Tells auto-patchelf to ignore the missing legacy media library files it can't find
+  autoPatchelfIgnore = [
+    "libavcodec.so.54"
+    "libavcodec.so.56"
+    "libavcodec.so.57"
+    "libavcodec.so.58"
+    "libavcodec.so.59"
+    "libavcodec.so.60"
+    "libavcodec.so.61"
+    "libavcodec-ffmpeg.so.56"
+    "libavformat.so.54"
+    "libavformat.so.56"
+    "libavformat.so.57"
+    "libavformat.so.58"
+    "libavformat.so.59"
+    "libavformat.so.60"
+    "libavformat.so.61"
+    "libavformat-ffmpeg.so.56"
+  ];
+
   unpackPhase = "dpkg-deb -x $src .";
 
   installPhase = ''
@@ -108,6 +130,6 @@ stdenv.mkDerivation rec {
 
   meta = {
     description = "MotiveWave Trading Platform";
-    homepage = "https://www.motivewave.com/";
+    homepage = "https://motivewave.com";
   };
 }
