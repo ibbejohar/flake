@@ -43,7 +43,7 @@ stdenv.mkDerivation rec {
 
   src = fetchurl {
     url = "https://www.motivewave.com/update/download.do?file_type=LINUX";
-    hash = "1jf10pbbwjqxnijvjkmla55sgrnscsbqsj1dpsk50ifvfqqa7wqp"; 
+    hash = "sha256:1jf10pbbwjqxnijvjkmla55sgrnscsbqsj1dpsk50ifvfqqa7wqp"; 
   };
 
   nativeBuildInputs = [
