@@ -4,11 +4,13 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./custom-drive.nix
       ./packages.nix
       ./config/boot/boot.nix
       ./config/hardware/hardware.nix
       ./config/network/network.nix
       ./config/services/services.nix
+      ./config/locale/locale.nix
       ./config/tty/tty.nix
       ./config/time/time.nix
       ./config/users/users.nix

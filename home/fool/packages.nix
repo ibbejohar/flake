@@ -60,5 +60,6 @@
    prismlauncher
    swayimg
    gamemode
+   moonlight-qt
   ];
 }

@@ -9,6 +9,7 @@
     modesetting.enable = true;
     open = false;
   };
+  hardware.nvidia-container-toolkit.enable = true; # For Distrobox
 
   services.xserver.videoDrivers = [ "nvidia" ];
 

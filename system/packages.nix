@@ -16,6 +16,7 @@ in
    #inputs.norgolith.packages.${pkgs.system}.default
    #dwmblocks
    st-custom
+   distrobox
   ];
 
   programs.steam = {
