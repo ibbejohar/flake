@@ -8,7 +8,7 @@
   #./wm/hyprland.nix
   # ./wm/dwl.nix
   #./wm/dwm.nix
-  ./wm/mangowc.nix
+  ./wm/mango.nix
 ];
 
 services = {
