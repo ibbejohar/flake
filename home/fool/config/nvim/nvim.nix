@@ -9,6 +9,8 @@
       defaultEditor = true;
       vimAlias = true;
       viAlias = true;
+      withRuby = false;
+      withPython3 = false;
       #extraLuaPackages = ps: [ ps.magick ];
       #extraPackages =  [ pkgs.imagemagick ];
     };
