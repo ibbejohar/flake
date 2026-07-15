@@ -8,9 +8,12 @@
         vhostUserPackages = [ pkgs.virtiofsd ]; 
       };
     };
-    podman = {
+    # podman = {
+    #   enable = true;
+    #   dockerCompat = true;
+    # };
+    docker = {
       enable = true;
-      dockerCompat = true;
     };
   };
 

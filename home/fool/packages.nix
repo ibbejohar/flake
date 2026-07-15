@@ -61,5 +61,6 @@
    swayimg
    gamemode
    moonlight-qt
+   telegram-desktop
   ];
 }
