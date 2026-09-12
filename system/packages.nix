@@ -17,7 +17,6 @@ in
    #dwmblocks
    st-custom
    distrobox
-   (callPackage ./motivewave.nix {})
   ];
 
   programs.steam = {
