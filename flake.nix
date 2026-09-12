@@ -35,7 +35,7 @@
           home-manager.nixosModules.home-manager {
             home-manager = {
               extraSpecialArgs = { inherit inputs system host user; };
-              useGlobalPkgs = false;
+              useGlobalPkgs = true;
               useUserPackages = true;
               users.${user} = import ./home/${user}/home.nix;
             };

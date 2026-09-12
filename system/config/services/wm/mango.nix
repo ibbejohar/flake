@@ -1,13 +1,13 @@
 { config, ... }:
 {
-  programs.mango.enable = true;
+  programs.mangowc.enable = true;
   programs.dms-shell = {
     enable = true;
     systemd = {
       enable = true;
       restartIfChanged = true;
     };
-    enableSystemMonitoring = true;
+    #enableSystemMonitoring = true;
   };
 
   xdg.portal = {
