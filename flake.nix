@@ -13,13 +13,14 @@
     };
     # Neovim Nightly Build
     #neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-    dwl-custom.url = "github:ibbejohar/dwl";
-    dwm-custom.url = "github:ibbejohar/dwm";
-    dwm-custom.inputs.nixpkgs.follows = "nixpkgs";
+    #dwl-custom.url = "github:ibbejohar/dwl";
+    #dwm-custom.url = "github:ibbejohar/dwm";
+    #dwm-custom.inputs.nixpkgs.follows = "nixpkgs";
     st-custom.url = "github:ibbejohar/st";
     norgolith.url = "github:NTBBloodbath/norgolith";
   };
-  outputs = inputs@{ self, nixpkgs, nixpkgsStable, home-manager, dwl-custom, dwm-custom, norgolith, st-custom, ... }: 
+  #outputs = inputs@{ self, nixpkgs, nixpkgsStable, home-manager, dwl-custom, dwm-custom, norgolith, st-custom, ... }: 
+  outputs = inputs@{ self, nixpkgs, nixpkgsStable, home-manager, norgolith, st-custom, ... }: 
   let
     user = "fool";
     host = "selfirah";
