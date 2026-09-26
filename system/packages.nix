@@ -17,9 +17,11 @@ in
    #dwmblocks
    st-custom
    distrobox
+   wireshark-qt
   ];
 
   programs.steam = {
     enable = true;
   };
+  programs.wireshark.enable = true;
 }

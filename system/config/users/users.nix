@@ -3,6 +3,6 @@
 {
   users.users.${user} = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "input" "keyd" "libvirtd" "kvm" "video" ];
+    extraGroups = [ "wheel" "input" "keyd" "libvirtd" "kvm" "video" "wireshark" ];
   };
 }

@@ -78,7 +78,6 @@ services = {
       };
       main = {
         capslock = "overloadt(control, esc, 200)";
-        tab = "overloadt(sym, tab, 200)";
         compose = "setlayout(colemak-se)";
         home = "setlayout(se)";
       };

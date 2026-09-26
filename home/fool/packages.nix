@@ -62,5 +62,6 @@
    gamemode
    moonlight-qt
    telegram-desktop
+   dig
   ];
 }
