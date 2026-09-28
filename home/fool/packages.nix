@@ -63,5 +63,6 @@
    moonlight-qt
    telegram-desktop
    dig
+   abiword
   ];
 }
