@@ -53,7 +53,8 @@ stdenv.mkDerivation {
 
     makeWrapper $out/share/motivewave/run.sh $out/bin/motivewave \
       --prefix PATH : ${lib.makeBinPath runtimeTools} \
-      --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath runtimeLibs}
+      --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath runtimeLibs} \
+      --set-default GDK_CORE_DEVICE_EVENTS 1
 
     runHook postInstall
   '';
