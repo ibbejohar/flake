@@ -18,7 +18,7 @@ in
    #dwmblocks
    st-custom
    distrobox
-   wireshark-qt
+   wireshark
    motivewave
   ];
 
