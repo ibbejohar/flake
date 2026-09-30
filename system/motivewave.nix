@@ -3,16 +3,16 @@
 , alsa-lib, freetype, fontconfig, gtk3, glib, libGL, zlib, libxkbcommon
 , pango, cairo, gdk-pixbuf, atk, libxml2, libxslt
 , coreutils, gnugrep, gnused, gawk, xdg-utils
-, xorg }:
+, libx11, libxext, libxrender, libxtst, libxi, libxxf86vm
+, libxt, libxcursor, libxrandr, libxfixes, libxcomposite, libxdamage }:
 
 let
   runtimeLibs = [
     alsa-lib freetype fontconfig gtk3 glib libGL zlib libxkbcommon
     pango cairo gdk-pixbuf atk libxml2 libxslt
     stdenv.cc.cc.lib
-    xorg.libX11 xorg.libXext xorg.libXrender xorg.libXtst xorg.libXi
-    xorg.libXxf86vm xorg.libXt xorg.libXcursor xorg.libXrandr
-    xorg.libXfixes xorg.libXcomposite xorg.libXdamage
+    libx11 libxext libxrender libxtst libxi libxxf86vm
+    libxt libxcursor libxrandr libxfixes libxcomposite libxdamage
   ];
 in
 stdenv.mkDerivation {
