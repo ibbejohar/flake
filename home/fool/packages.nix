@@ -34,7 +34,8 @@
    mpc
    mpdris2
    mpv
-   nemo
+   nemo-with-extensions
+   file-roller
    nixd
    #obsidian
    pulsemixer
@@ -64,5 +65,7 @@
    telegram-desktop
    dig
    abiword
+   vesktop
+   nsxiv
   ];
 }

@@ -3,12 +3,12 @@
 {
   imports = [
   #./de/gnome.nix
-  #./de/cinnamon.nix
+  ./de/cinnamon.nix
   #./wm/river.nix
   #./wm/hyprland.nix
   # ./wm/dwl.nix
   #./wm/dwm.nix
-  ./wm/mango.nix
+  #./wm/mango.nix
 ];
 
 services = {
