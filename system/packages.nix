@@ -1,6 +1,7 @@
 { config, pkgs, inputs, system, ... }:
 let
   st-custom = inputs.st-custom.packages.${system}.st;
+  motivewave = pkgs.callPackage ./motivewave.nix { src = inputs.motivewave-deb; };
 in
 {
   environment.systemPackages = with pkgs; [
@@ -18,6 +19,7 @@ in
    st-custom
    distrobox
    wireshark-qt
+   motivewave
   ];
 
   programs.steam = {

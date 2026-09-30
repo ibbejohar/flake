@@ -18,6 +18,10 @@
     #dwm-custom.inputs.nixpkgs.follows = "nixpkgs";
     st-custom.url = "github:ibbejohar/st";
     norgolith.url = "github:NTBBloodbath/norgolith";
+    motivewave-deb = {
+      url = "file+https://motivewave.com/update/download.do?file_type=LINUX";
+      flake = false;
+    };
   };
   #outputs = inputs@{ self, nixpkgs, nixpkgsStable, home-manager, dwl-custom, dwm-custom, norgolith, st-custom, ... }: 
   outputs = inputs@{ self, nixpkgs, nixpkgsStable, home-manager, norgolith, st-custom, ... }: 
