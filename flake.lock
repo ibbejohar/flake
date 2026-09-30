@@ -20,6 +20,18 @@
         "type": "github"
       }
     },
+    "motivewave-deb": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-7sA++JR1v545VOFnyeOkEMdk38CKldmUzn11p6nNWAw=",
+        "type": "file",
+        "url": "https://motivewave.com/update/download.do?file_type=LINUX"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://motivewave.com/update/download.do?file_type=LINUX"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1790323409,
@@ -102,6 +114,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "motivewave-deb": "motivewave-deb",
         "nixpkgs": "nixpkgs",
         "nixpkgsStable": "nixpkgsStable",
         "norgolith": "norgolith",
