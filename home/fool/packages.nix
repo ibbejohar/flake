@@ -67,5 +67,7 @@
    abiword
    vesktop
    nsxiv
+   obsidian
+   slack
   ];
 }
