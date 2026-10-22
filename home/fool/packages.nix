@@ -55,9 +55,8 @@
    yt-dlp
    zip
    zoom-us
-   #rust-analyzer
+   rust-analyzer
    rustup
-   gdb # C/C++/Rust Debugger
    prismlauncher
    swayimg
    gamemode
