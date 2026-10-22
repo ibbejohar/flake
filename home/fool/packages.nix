@@ -55,8 +55,11 @@
    yt-dlp
    zip
    zoom-us
+   rustc
+   cargo
+   rustfmt
+   clippy
    rust-analyzer
-   rustup
    prismlauncher
    swayimg
    gamemode
@@ -65,6 +68,7 @@
    dig
    abiword
    vesktop
+   tree-sitter
    nsxiv
    obsidian
    slack
