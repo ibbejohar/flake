@@ -23,7 +23,7 @@
     "motivewave-deb": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-7sA++JR1v545VOFnyeOkEMdk38CKldmUzn11p6nNWAw=",
+        "narHash": "sha256-KGy4Iz9qCiWf7xCLfFzTRkj9ELUSikETCDCMIQmzOW8=",
         "type": "file",
         "url": "https://motivewave.com/update/download.do?file_type=LINUX"
       },
