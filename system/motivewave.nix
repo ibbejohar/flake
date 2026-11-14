@@ -63,7 +63,8 @@ stdenv.mkDerivation {
       --set-default GDK_CORE_DEVICE_EVENTS 1 \
       --set LC_ALL C \
       --run 'export MW_HOME="''${XDG_CONFIG_HOME:-$HOME/.config}/motivewave"' \
-      --run 'mkdir -p "$MW_HOME"'
+      --run 'mkdir -p "$MW_HOME"' \
+      --run 'export JAVA_TOOL_OPTIONS="-Duser.home=$MW_HOME ''${JAVA_TOOL_OPTIONS:-}"'
 
     runHook postInstall
   '';
