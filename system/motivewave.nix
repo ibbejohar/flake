@@ -44,9 +44,15 @@ stdenv.mkDerivation {
     # optional JavaFX ffmpeg plugins that link against old libav versions
     rm -f $out/share/motivewave/javafx/libavplugin*.so
 
-    # run.sh hardcodes the Debian install path
+    # run.sh hardcodes the Debian install path, and uses $HOME both for
+    # startup.ini and for -DUserHome (which decides where MotiveWave creates
+    # .motivewave, "MotiveWave Data", "MotiveWave Backup" and
+    # "MotiveWave Extensions"). Point those two at $MW_HOME instead, which the
+    # wrapper below sets to ~/.config/motivewave.
     substituteInPlace $out/share/motivewave/run.sh \
-      --replace-fail "/usr/share/motivewave" "$out/share/motivewave"
+      --replace-fail "/usr/share/motivewave" "$out/share/motivewave" \
+      --replace-fail '$HOME/.motivewave/startup.ini' '$MW_HOME/.motivewave/startup.ini' \
+      --replace-fail '-DUserHome=$HOME' '-DUserHome=$MW_HOME'
 
     install -Dm444 usr/share/motivewave/icons/mwave_256x256.png \
       $out/share/icons/hicolor/256x256/apps/motivewave.png
@@ -55,7 +61,9 @@ stdenv.mkDerivation {
       --prefix PATH : ${lib.makeBinPath runtimeTools} \
       --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath runtimeLibs} \
       --set-default GDK_CORE_DEVICE_EVENTS 1 \
-      --set LC_ALL C
+      --set LC_ALL C \
+      --run 'export MW_HOME="''${XDG_CONFIG_HOME:-$HOME/.config}/motivewave"' \
+      --run 'mkdir -p "$MW_HOME"'
 
     runHook postInstall
   '';
