@@ -5,6 +5,7 @@
     libvirtd = {
       enable = true;
       qemu = {
+        swtpm.enable = true;
         vhostUserPackages = [ pkgs.virtiofsd ]; 
       };
     };

@@ -20,6 +20,10 @@ in
    distrobox
    wireshark
    motivewave
+   inputs.winapps.packages.${system}.winapps
+   inputs.winapps.packages.${system}.winapps-launcher
+   freerdp
+   virtio-win
   ];
 
   programs.steam = {
